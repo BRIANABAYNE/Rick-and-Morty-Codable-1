@@ -9,12 +9,17 @@ import Foundation
 
 struct TopLevelDictonary: Decodable  {
     
-    let results: [Result]
+private enum CodingKeys: String, CodingKey {
+        case character = "results"
 }
+    
+let character: [Character]
 
-struct Result: Decodable {
+struct Character: Decodable {
     
 
+    }
+        
     let name: String
     let species: String
     let gender: String

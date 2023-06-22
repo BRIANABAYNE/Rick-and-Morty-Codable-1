@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yo2-aT-iOV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Character Table View Controller-->
+        <scene sceneID="9Zt-Dj-fOk">
+            <objects>
+                <tableViewController id="m6F-JB-mvP" customClass="CharacterTableViewController" customModule="Rick_and_Morty_Codable" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="6sN-28-DhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="ODd-J4-eqq">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="m6F-JB-mvP" id="AHF-dr-VBb"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="108" id="Pvq-vS-Pad" customClass="CharacterTableViewCell" customModule="Rick_and_Morty_Codable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="393" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pvq-vS-Pad" id="BGi-tq-ZBJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-37-bYg">
+                                            <rect key="frame" x="208" y="12" width="71.666666666666686" height="90"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TA3-93-sID">
+                                                    <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="23.333333333333332"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkE-Hr-7AK">
+                                                    <rect key="frame" x="0.0" y="33.333333333333336" width="71.666666666666671" height="23.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx4-yg-gRd">
+                                                    <rect key="frame" x="0.0" y="66.666666666666671" width="71.666666666666671" height="23.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zgm-q3-uwn">
+                                            <rect key="frame" x="20" y="0.0" width="108" height="108"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Zgm-q3-uwn" secondAttribute="height" multiplier="3:3" id="fFJ-lr-CaT"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="TZI-37-bYg" firstAttribute="leading" secondItem="Zgm-q3-uwn" secondAttribute="trailing" constant="80" id="7zE-f8-byL"/>
+                                        <constraint firstItem="Zgm-q3-uwn" firstAttribute="top" secondItem="BGi-tq-ZBJ" secondAttribute="top" id="K78-VI-q7W"/>
+                                        <constraint firstItem="TZI-37-bYg" firstAttribute="bottom" secondItem="BGi-tq-ZBJ" secondAttribute="bottomMargin" constant="5" id="TrR-it-qhw"/>
+                                        <constraint firstItem="TZI-37-bYg" firstAttribute="top" secondItem="BGi-tq-ZBJ" secondAttribute="top" constant="12" id="bZM-zh-bvg"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zgm-q3-uwn" secondAttribute="bottom" id="hoN-u8-ejN"/>
+                                        <constraint firstItem="Zgm-q3-uwn" firstAttribute="leading" secondItem="BGi-tq-ZBJ" secondAttribute="leadingMargin" id="sVL-6p-FJd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <connections>
+                                    <outlet property="characterGenderLabel" destination="zx4-yg-gRd" id="upa-NS-H5h"/>
+                                    <outlet property="characterImage" destination="Zgm-q3-uwn" id="SGV-ND-PAK"/>
+                                    <outlet property="characterNameLabel" destination="TA3-93-sID" id="PJv-58-SBA"/>
+                                    <outlet property="characterSpeciesLabel" destination="JkE-Hr-7AK" id="2QM-MM-X5g"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m6F-JB-mvP" id="lRl-9c-rCk"/>
+                            <outlet property="delegate" destination="m6F-JB-mvP" id="X8m-mK-U6E"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="GqN-Bq-eZN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8i-Ji-4uy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1623.6641221374045" y="33.098591549295776"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="0ec-pc-Tk6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yo2-aT-iOV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rsa-yQ-UL2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B3t-iN-G5z">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m6F-JB-mvP" kind="relationship" relationship="rootViewController" id="US4-wu-jQs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jmg-ws-WGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696.94656488549617" y="33.098591549295776"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

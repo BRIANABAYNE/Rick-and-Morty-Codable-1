@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		3A8B6D802A44EB5700CD3BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6D7F2A44EB5700CD3BC3 /* AppDelegate.swift */; };
 		3A8B6D822A44EB5700CD3BC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6D812A44EB5700CD3BC3 /* SceneDelegate.swift */; };
-		3A8B6D842A44EB5700CD3BC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6D832A44EB5700CD3BC3 /* ViewController.swift */; };
 		3A8B6D872A44EB5700CD3BC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B6D852A44EB5700CD3BC3 /* Main.storyboard */; };
 		3A8B6D892A44EB5800CD3BC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B6D882A44EB5800CD3BC3 /* Assets.xcassets */; };
 		3A8B6D8C2A44EB5800CD3BC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B6D8A2A44EB5800CD3BC3 /* LaunchScreen.storyboard */; };
 		3A8B6D942A44EB9100CD3BC3 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6D932A44EB9100CD3BC3 /* Character.swift */; };
+		3A8B6D9B2A44F61000CD3BC3 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6D9A2A44F61000CD3BC3 /* NetworkingController.swift */; };
+		3A8B6D9E2A44F72100CD3BC3 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6D9D2A44F72100CD3BC3 /* ResultError.swift */; };
+		3A8B6DA32A450FEA00CD3BC3 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6DA22A450FEA00CD3BC3 /* CharacterTableViewCell.swift */; };
+		3A8B6DA52A4510DC00CD3BC3 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6DA42A4510DC00CD3BC3 /* CharacterTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A8B6D7C2A44EB5700CD3BC3 /* Rick and Morty Codable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick and Morty Codable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8B6D7F2A44EB5700CD3BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8B6D812A44EB5700CD3BC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A8B6D832A44EB5700CD3BC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A8B6D862A44EB5700CD3BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A8B6D882A44EB5800CD3BC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8B6D8B2A44EB5800CD3BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8B6D8D2A44EB5800CD3BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8B6D932A44EB9100CD3BC3 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		3A8B6D9A2A44F61000CD3BC3 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
+		3A8B6D9D2A44F72100CD3BC3 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
+		3A8B6DA22A450FEA00CD3BC3 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		3A8B6DA42A4510DC00CD3BC3 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +64,11 @@
 		3A8B6D7E2A44EB5700CD3BC3 /* Rick and Morty Codable */ = {
 			isa = PBXGroup;
 			children = (
-				3A8B6D7F2A44EB5700CD3BC3 /* AppDelegate.swift */,
-				3A8B6D812A44EB5700CD3BC3 /* SceneDelegate.swift */,
-				3A8B6D832A44EB5700CD3BC3 /* ViewController.swift */,
-				3A8B6D852A44EB5700CD3BC3 /* Main.storyboard */,
-				3A8B6D882A44EB5800CD3BC3 /* Assets.xcassets */,
-				3A8B6D8A2A44EB5800CD3BC3 /* LaunchScreen.storyboard */,
-				3A8B6D8D2A44EB5800CD3BC3 /* Info.plist */,
+				3A8B6DA12A45086D00CD3BC3 /* SupportingFiles */,
+				3A8B6DA02A45083B00CD3BC3 /* Storyboard */,
+				3A8B6D9F2A45081D00CD3BC3 /* ViewController */,
 				3A8B6D952A44EB9800CD3BC3 /* Model */,
+				3A8B6D9C2A44F70A00CD3BC3 /* Error */,
 			);
 			path = "Rick and Morty Codable";
 			sourceTree = "<group>";
@@ -74,8 +77,54 @@
 			isa = PBXGroup;
 			children = (
 				3A8B6D932A44EB9100CD3BC3 /* Character.swift */,
+				3A8B6D992A44F5F500CD3BC3 /* NetworkingController */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3A8B6D992A44F5F500CD3BC3 /* NetworkingController */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B6D9A2A44F61000CD3BC3 /* NetworkingController.swift */,
+			);
+			path = NetworkingController;
+			sourceTree = "<group>";
+		};
+		3A8B6D9C2A44F70A00CD3BC3 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B6D9D2A44F72100CD3BC3 /* ResultError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		3A8B6D9F2A45081D00CD3BC3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B6DA22A450FEA00CD3BC3 /* CharacterTableViewCell.swift */,
+				3A8B6DA42A4510DC00CD3BC3 /* CharacterTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3A8B6DA02A45083B00CD3BC3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B6D852A44EB5700CD3BC3 /* Main.storyboard */,
+				3A8B6D8A2A44EB5800CD3BC3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3A8B6DA12A45086D00CD3BC3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B6D882A44EB5800CD3BC3 /* Assets.xcassets */,
+				3A8B6D812A44EB5700CD3BC3 /* SceneDelegate.swift */,
+				3A8B6D7F2A44EB5700CD3BC3 /* AppDelegate.swift */,
+				3A8B6D8D2A44EB5800CD3BC3 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8B6D842A44EB5700CD3BC3 /* ViewController.swift in Sources */,
+				3A8B6D9E2A44F72100CD3BC3 /* ResultError.swift in Sources */,
 				3A8B6D802A44EB5700CD3BC3 /* AppDelegate.swift in Sources */,
+				3A8B6DA52A4510DC00CD3BC3 /* CharacterTableViewController.swift in Sources */,
 				3A8B6D822A44EB5700CD3BC3 /* SceneDelegate.swift in Sources */,
 				3A8B6D942A44EB9100CD3BC3 /* Character.swift in Sources */,
+				3A8B6D9B2A44F61000CD3BC3 /* NetworkingController.swift in Sources */,
+				3A8B6DA32A450FEA00CD3BC3 /* CharacterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Rick and Morty Codable/Info.plist";
+				INFOPLIST_FILE = "Rick and Morty Codable/ SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -327,7 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Rick and Morty Codable/Info.plist";
+				INFOPLIST_FILE = "Rick and Morty Codable/ SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
