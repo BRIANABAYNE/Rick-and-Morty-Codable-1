@@ -17,7 +17,7 @@ struct NetworkingController {
     // data task
     // decode data
     
-    func fetch(endpoint: String, with searchTerm: String, completion: @escaping (Result<TopLevelDictonary, ResultError>) -> Void) {
+    func fetch(with searchTerm: String, completion: @escaping (Result<TopLevelDictonary, ResultError>) -> Void) {
         guard let baseURL = URL(string: "https://rickandmortyapi.com/api/character") else {completion(.failure(.invalidURL)); return}
         
         var urlRequest = URLRequest(url:baseURL)
@@ -48,7 +48,27 @@ struct NetworkingController {
         
     }
     
-    func fetchImage() 
+    func fetchImage(with image: Character, completion: @escaping (Result<UIImage, ResultError) -> Void) {
+        
+        guard let imageURL = URL(string: characterImage) else { return }
+        
+        URLSession.shared.dataTask(with: imageURL) { imageData, _, error in
+            
+            if let error {
+                completion(.failure(.thrownError(error))); return
+                
+            }
+            guard let imageData else {completion(.failure(.noData)); return}
+            guard let image = UIImage(data: imageData) else {completion(.failure(.unableToDecode));
+                return }
+                
+                completion(.success(image))
+        }.resume()
+            
+        
+        
+        
+    }
     
     
     

@@ -37,20 +37,22 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TA3-93-sID">
                                                     <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="23.333333333333332"/>
                                                     <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <color key="textColor" red="0.21308475166402202" green="0.98828125" blue="0.20759627867902897" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkE-Hr-7AK">
                                                     <rect key="frame" x="0.0" y="33.333333333333336" width="71.666666666666671" height="23.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <color key="textColor" red="0.10717344289368327" green="0.9649846971649485" blue="0.17415051561488804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx4-yg-gRd">
                                                     <rect key="frame" x="0.0" y="66.666666666666671" width="71.666666666666671" height="23.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemGreenColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" red="0.4991424864421955" green="0.98783827319587625" blue="0.50906629140061377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
@@ -61,8 +63,8 @@
                                             </constraints>
                                         </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemTealColor"/>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" systemColor="tintColor"/>
+                                    <color key="tintColor" red="0.16705642346504618" green="0.60250576022211033" blue="0.76942896842956543" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstItem="TZI-37-bYg" firstAttribute="leading" secondItem="Zgm-q3-uwn" secondAttribute="trailing" constant="80" id="7zE-f8-byL"/>
                                         <constraint firstItem="Zgm-q3-uwn" firstAttribute="top" secondItem="BGi-tq-ZBJ" secondAttribute="top" id="K78-VI-q7W"/>
@@ -73,7 +75,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="characterGenderLabel" destination="zx4-yg-gRd" id="upa-NS-H5h"/>
                                     <outlet property="characterImage" destination="Zgm-q3-uwn" id="SGV-ND-PAK"/>
@@ -88,6 +90,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="GqN-Bq-eZN"/>
+                    <connections>
+                        <outlet property="characterSearchBar" destination="ODd-J4-eqq" id="lQK-RI-ard"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8i-Ji-4uy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,14 +122,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,17 +13,20 @@ private enum CodingKeys: String, CodingKey {
         case character = "results"
 }
     
-let character: [Character]
+let characters: [Character]
 
 struct Character: Decodable {
-    
+    private enum CodingKeys: String, CodingKey {
+        case characterImage = "image"
+        
+    }
 
     }
         
     let name: String
     let species: String
     let gender: String
-    let image: String
+    let characterImage: String
    
 }
 
