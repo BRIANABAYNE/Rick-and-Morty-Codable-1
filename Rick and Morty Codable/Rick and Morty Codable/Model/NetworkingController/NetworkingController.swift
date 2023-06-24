@@ -17,11 +17,12 @@ struct NetworkingController {
     // data task
     // decode data
     
-    func fetch(with searchTerm: String, completion: @escaping (Result<TopLevelDictonary, ResultError>) -> Void) {
+    func fetch(endpoint: String, with searchTerm: String, completion: @escaping (Result<TopLevelDictonary, ResultError>) -> Void) {
         guard let baseURL = URL(string: "https://rickandmortyapi.com/api/character") else {completion(.failure(.invalidURL)); return}
         
         var urlRequest = URLRequest(url:baseURL)
-        urlRequest.url?.append(path: endPoint)
+        urlRequest.url?.append(path: endpoint)
+        let searchTermQueryItem = URLQueryItem(name: "quary", value: searchTerm)
         print(urlRequest.url)
         
         URLSession.shared.dataTask(with: urlRequest) { characterData, characterResponse, error in
@@ -36,7 +37,7 @@ struct NetworkingController {
             guard let characterData else {completion(.failure(.noData)); return}
             do {
                 
-                let toplevelDict = try JSONDecoder().decode(TopLevelDictonary, from: characterData)
+                let toplevelDict = try JSONDecoder().decode(TopLevelDictonary.self, from: characterData)
                 completion(.success(toplevelDict))
                 print("Lets f*cking go!!")
             } catch {
@@ -48,9 +49,9 @@ struct NetworkingController {
         
     }
     
-    func fetchImage(with image: Character, completion: @escaping (Result<UIImage, ResultError) -> Void) {
+    func fetchImage(with characterImage: Character, completion: @escaping (Result<UIImage, ResultError) -> Void) {
         
-        guard let imageURL = URL(string: characterImage) else { return }
+        guard let imageURL = URL(string:"https://rickandmortyapi.com/api/character/avatar") else { return }
         
         URLSession.shared.dataTask(with: imageURL) { imageData, _, error in
             
@@ -61,14 +62,38 @@ struct NetworkingController {
             guard let imageData else {completion(.failure(.noData)); return}
             guard let image = UIImage(data: imageData) else {completion(.failure(.unableToDecode));
                 return }
-                
-                completion(.success(image))
-        }.resume()
             
-        
-        
+            completion(.success(image))
+        }.resume()
         
     }
+    
+    func fetchCharacterDetail(for id: Int, completion: @escaping (Result<CharacterDetailDict, ResultError>) -> Void ) {
+        guard let baseURL = URL(string: "https://rickandmortyapi.com/api/character/location") else
+        { completion(.failure(.invalidURL)); return}
+        var urlRequest = URLRequest(url: baseURL)
+        urlRequest.url?.append(path: "\(id)")
+        
+        
+        URLSession.shared.dataTask(with: urlRequest) { characterDetailData, _, characterDetailError in
+            
+            if let characterDetailError {
+                completion(.failure(.thrownError(characterDetailError))); return
+            }
+            
+            guard let characterDetailData else { completion(.failure(.noData)); return }
+            
+            do {
+                let characterDetailDict = try JSONDecoder().decode(CharacterDetailDict.self, from: characterDetailData)
+                completion(.success(characterDetailDict))
+            } catch {
+                completion(.failure(.unableToDecode)); return
+            }
+            
+        }.resume()
+        
+    }
+    
     
     
     

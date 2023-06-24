@@ -7,6 +7,8 @@
 
 import UIKit
 
+@available(iOS 16.0, *)
+
 class CharacterTableViewCell: UITableViewCell {
     
     
@@ -17,22 +19,44 @@ class CharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var characterImage: UIImageView!
     
     
+    // MARK: - Properteis
+    var characterToSendInSegue: Character?
+    var characterImageToSendInSegue: UIImage?
     
-    // MARK: - Properties
-    var character: Character?
-    var image: UIImage
     
-    func updateView(character:Character) {
-        
-        
-        
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        characterImage.image = nil
     }
     
-    func fetcImage(character:Character) {
-        NetworkingController().fetchImage(with: character) { result in
-            switch result {
-            case.success(let image)
+    
+}
+
+
+func updateView(character: Character) {
+    
+    characterToSendInSegue = character
+    fetchImage(character:character)
+    
+}
+
+
+func fetchImage(character: Character) {
+    guard let characterImage = character.characterImage else { return }
+    NetworkingController().fetchImage(with: character) { [weak self] result in
+        switch result {
+        case.success(let path):
+            DispatchQueue.main.async {
+                self?.characterToSendInSegue = path
+                self?.characterImage.image = path
+                self?.characterNameLabel.text = character.name
+                self?.characterGenderLabel.text = character.gender
+                self.characterSpeciesLabel.text = "\(character.specicesLabel)"
+                
+                
             }
+        case.failure(let failure):
+            print(failure.errorDescription)
         }
     }
     
