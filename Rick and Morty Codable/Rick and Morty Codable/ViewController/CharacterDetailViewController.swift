@@ -22,7 +22,7 @@ class CharacterDetailViewController: UIViewController {
     
     // MARK: - Properties
     
-    var characterDetailSendViaSegue: CharacterDetailDict? {
+    var characterDetailSentViaSegue: CharacterDetailDict? {
         didSet {
             updateView()
         }
@@ -39,7 +39,7 @@ class CharacterDetailViewController: UIViewController {
     
     
     func updateView() {
-        guard let unrapedCharacterDetailDict = characterDetailSendViaSegue,
+        guard let unrapedCharacterDetailDict = characterDetailSentViaSegue,
               let unrapedCharacterImage = characterImageSentViaSegue else { return }
         
         
@@ -48,7 +48,7 @@ class CharacterDetailViewController: UIViewController {
             self.characterOrginLabel.text = "\(unrapedCharacterDetailDict.origin)"
             self.characterTypeLabel.text = unrapedCharacterDetailDict.type
             self.characterNameLabel.text = unrapedCharacterDetailDict.characterName
-            self.characterIDLabel.text = "\(unrapedCharacterImage.)"
+            self.characterIDLabel.text = "\(unrapedCharacterImage)"
             self.characterImage.image = unrapedCharacterImage
             
             
@@ -64,15 +64,5 @@ class CharacterDetailViewController: UIViewController {
     }
     
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+   
 }

@@ -125,10 +125,10 @@
 		3A8B6DA12A45086D00CD3BC3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3A8B6D8D2A44EB5800CD3BC3 /* Info.plist */,
 				3A8B6D882A44EB5800CD3BC3 /* Assets.xcassets */,
 				3A8B6D812A44EB5700CD3BC3 /* SceneDelegate.swift */,
 				3A8B6D7F2A44EB5700CD3BC3 /* AppDelegate.swift */,
-				3A8B6D8D2A44EB5800CD3BC3 /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Rick and Morty Codable/ SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "Rick and Morty Codable/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -387,7 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Rick and Morty Codable/ SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "Rick and Morty Codable/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

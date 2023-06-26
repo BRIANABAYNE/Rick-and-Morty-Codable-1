@@ -25,7 +25,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="108" id="Pvq-vS-Pad" customClass="CharacterTableViewCell" customModule="Rick_and_Morty_Codable" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterCell" rowHeight="108" id="Pvq-vS-Pad" customClass="CharacterTableViewCell" customModule="Rick_and_Morty_Codable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="94" width="393" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pvq-vS-Pad" id="BGi-tq-ZBJ">
@@ -109,16 +109,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="134" translatesAutoresizingMaskIntoConstraints="NO" id="abe-4N-Heq">
-                                <rect key="frame" x="66.000000000000014" y="511" width="253.33333333333337" height="17"/>
+                                <rect key="frame" x="66" y="511" width="293.33333333333331" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnC-dz-wTh">
-                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="17"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-O5-chS">
-                                        <rect key="frame" x="193.66666666666669" y="0.0" width="59.666666666666657" height="17"/>
+                                        <rect key="frame" x="213.66666666666669" y="0.0" width="79.666666666666686" height="17"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -126,16 +126,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-US-lMf">
-                                <rect key="frame" x="150" y="113" width="53" height="53"/>
+                                <rect key="frame" x="150" y="113" width="93" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2W-Ez-Yvr">
-                                        <rect key="frame" x="0.0" y="0.0" width="53" height="20.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="20.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGf-zQ-7Fx">
-                                        <rect key="frame" x="0.0" y="32.666666666666657" width="53" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="32.666666666666657" width="93" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -172,7 +172,6 @@
                         <outlet property="characterImage" destination="cnf-KW-4Dm" id="1bv-eg-zOt"/>
                         <outlet property="characterNameLabel" destination="z2W-Ez-Yvr" id="Qjv-o6-eUb"/>
                         <outlet property="characterOrginLabel" destination="FnC-dz-wTh" id="ZDa-kw-qvR"/>
-                        <outlet property="characterOriginLabel" destination="z2W-Ez-Yvr" id="kal-ms-flb"/>
                         <outlet property="characterTypeLabel" destination="pTb-O5-chS" id="gb5-ic-xGp"/>
                     </connections>
                 </viewController>

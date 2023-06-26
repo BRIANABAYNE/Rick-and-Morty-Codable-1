@@ -14,13 +14,12 @@ struct CharacterDetailDict: Decodable {
         case characterName = "name"
         case type
         case origin
-        
     }
     
     let id: Int
     let characterName: String
     let type: String
-    let origin: [Origin]
+    let origin: Origin
 
 }
 struct Origin: Decodable {
