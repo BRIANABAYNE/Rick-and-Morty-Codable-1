@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yo2-aT-iOV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="0ec-pc-Tk6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yo2-aT-iOV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rsa-yQ-UL2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B3t-iN-G5z">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ysC-Tq-Nvt" kind="relationship" relationship="rootViewController" id="US4-wu-jQs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jmg-ws-WGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696.94656488549617" y="33.098591549295776"/>
+        </scene>
+        <!--CharacterCell-->
+        <scene sceneID="3W1-jJ-RfY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CharacterCell" id="ysC-Tq-Nvt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wpI-bt-diq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kP1-d7-w3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1623.6641221374045" y="33.098591549295776"/>
+        </scene>
+        <!--UIViewController-V1v-OD-iWr-->
+        <scene sceneID="znO-yX-iGC">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="UIViewController-V1v-OD-iWr" storyboardName="CharacterDetail" referencedIdentifier="UIViewController-V1v-OD-iWr" id="235-Ft-Wof" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVC-KN-VqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525.9541984732823" y="32.394366197183103"/>
+        </scene>
+    </scenes>
+</document>

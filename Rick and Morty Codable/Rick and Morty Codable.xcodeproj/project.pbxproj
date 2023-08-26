@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A7320662A992513007C7B45 /* CharacterCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7320642A992513007C7B45 /* CharacterCell.storyboard */; };
+		3A7320692A99253D007C7B45 /* CharacterDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7320672A99253D007C7B45 /* CharacterDetail.storyboard */; };
 		3A8B6D802A44EB5700CD3BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6D7F2A44EB5700CD3BC3 /* AppDelegate.swift */; };
 		3A8B6D822A44EB5700CD3BC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B6D812A44EB5700CD3BC3 /* SceneDelegate.swift */; };
 		3A8B6D872A44EB5700CD3BC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B6D852A44EB5700CD3BC3 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A7320652A992513007C7B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Rick and Morty Codable/Storyboard/Base.lproj/CharacterCell.storyboard"; sourceTree = "<group>"; };
+		3A7320682A99253D007C7B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Rick and Morty Codable/Storyboard/Base.lproj/CharacterDetail.storyboard"; sourceTree = "<group>"; };
 		3A8B6D7C2A44EB5700CD3BC3 /* Rick and Morty Codable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick and Morty Codable.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8B6D7F2A44EB5700CD3BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8B6D812A44EB5700CD3BC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A7320622A99242B007C7B45 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3A7320632A992443007C7B45 /* CharacterCell */,
+				3A8B6D9F2A45081D00CD3BC3 /* CharacterDetail */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3A7320632A992443007C7B45 /* CharacterCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A7320642A992513007C7B45 /* CharacterCell.storyboard */,
+				3A8B6DA22A450FEA00CD3BC3 /* CharacterTableViewCell.swift */,
+				3A8B6DA42A4510DC00CD3BC3 /* CharacterTableViewController.swift */,
+			);
+			path = CharacterCell;
+			sourceTree = "<group>";
+		};
 		3A8B6D732A44EB5700CD3BC3 = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				3A8B6DA12A45086D00CD3BC3 /* SupportingFiles */,
-				3A8B6DA02A45083B00CD3BC3 /* Storyboard */,
-				3A8B6D9F2A45081D00CD3BC3 /* ViewController */,
+				3A8B6DA02A45083B00CD3BC3 /* MainStoryboard */,
+				3A7320622A99242B007C7B45 /* UI */,
 				3A8B6D952A44EB9800CD3BC3 /* Model */,
-				3A8B6D9C2A44F70A00CD3BC3 /* Error */,
+				3A8B6D9C2A44F70A00CD3BC3 /* Services */,
 			);
 			path = "Rick and Morty Codable";
 			sourceTree = "<group>";
@@ -95,31 +118,30 @@
 			path = NetworkingController;
 			sourceTree = "<group>";
 		};
-		3A8B6D9C2A44F70A00CD3BC3 /* Error */ = {
+		3A8B6D9C2A44F70A00CD3BC3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				3A8B6D9D2A44F72100CD3BC3 /* ResultError.swift */,
 			);
-			path = Error;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		3A8B6D9F2A45081D00CD3BC3 /* ViewController */ = {
+		3A8B6D9F2A45081D00CD3BC3 /* CharacterDetail */ = {
 			isa = PBXGroup;
 			children = (
-				3A8B6DA22A450FEA00CD3BC3 /* CharacterTableViewCell.swift */,
-				3A8B6DA42A4510DC00CD3BC3 /* CharacterTableViewController.swift */,
+				3A7320672A99253D007C7B45 /* CharacterDetail.storyboard */,
 				3AC0EC202A46528E003CB1AC /* CharacterDetailViewController.swift */,
 			);
-			path = ViewController;
+			path = CharacterDetail;
 			sourceTree = "<group>";
 		};
-		3A8B6DA02A45083B00CD3BC3 /* Storyboard */ = {
+		3A8B6DA02A45083B00CD3BC3 /* MainStoryboard */ = {
 			isa = PBXGroup;
 			children = (
 				3A8B6D852A44EB5700CD3BC3 /* Main.storyboard */,
 				3A8B6D8A2A44EB5800CD3BC3 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboard;
+			path = MainStoryboard;
 			sourceTree = "<group>";
 		};
 		3A8B6DA12A45086D00CD3BC3 /* SupportingFiles */ = {
@@ -191,9 +213,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7320662A992513007C7B45 /* CharacterCell.storyboard in Resources */,
 				3A8B6D8C2A44EB5800CD3BC3 /* LaunchScreen.storyboard in Resources */,
 				3A8B6D892A44EB5800CD3BC3 /* Assets.xcassets in Resources */,
 				3A8B6D872A44EB5700CD3BC3 /* Main.storyboard in Resources */,
+				3A7320692A99253D007C7B45 /* CharacterDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +243,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3A7320642A992513007C7B45 /* CharacterCell.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A7320652A992513007C7B45 /* Base */,
+			);
+			name = CharacterCell.storyboard;
+			sourceTree = "<group>";
+		};
+		3A7320672A99253D007C7B45 /* CharacterDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A7320682A99253D007C7B45 /* Base */,
+			);
+			name = CharacterDetail.storyboard;
+			sourceTree = "<group>";
+		};
 		3A8B6D852A44EB5700CD3BC3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

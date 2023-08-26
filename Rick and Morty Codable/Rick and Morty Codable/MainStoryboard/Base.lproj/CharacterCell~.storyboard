@@ -78,10 +78,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <outlet property="characterGenderLabel" destination="zx4-yg-gRd" id="upa-NS-H5h"/>
+                                    <outlet property="characterGenderLabel" destination="zx4-yg-gRd" id="inb-jq-4uG"/>
                                     <outlet property="characterImage" destination="Zgm-q3-uwn" id="SGV-ND-PAK"/>
                                     <outlet property="characterNameLabel" destination="TA3-93-sID" id="PJv-58-SBA"/>
-                                    <outlet property="characterSpeciesLabel" destination="JkE-Hr-7AK" id="2QM-MM-X5g"/>
+                                    <outlet property="characterSpeciesLabel" destination="JkE-Hr-7AK" id="pLL-aw-nWJ"/>
                                     <segue destination="V1v-OD-iWr" kind="show" identifier="toDetailVC" id="nCr-rP-j8t"/>
                                 </connections>
                             </tableViewCell>
@@ -108,42 +108,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="134" translatesAutoresizingMaskIntoConstraints="NO" id="abe-4N-Heq">
-                                <rect key="frame" x="66" y="511" width="293.33333333333331" height="17"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="tC9-UC-deL">
+                                <rect key="frame" x="63" y="618" width="287" height="17"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnC-dz-wTh">
-                                        <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qts-T5-ela">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="17"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-O5-chS">
-                                        <rect key="frame" x="213.66666666666669" y="0.0" width="79.666666666666686" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-nz-7Ma">
+                                        <rect key="frame" x="110" y="0.0" width="67" height="17"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                                        <color key="textColor" red="0.35407230257987976" green="0.90711671113967896" blue="0.36392593383789062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cka-6z-kC6">
+                                        <rect key="frame" x="220" y="0.0" width="67" height="17"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                                        <color key="textColor" red="0.35407230257987976" green="0.90711671113967896" blue="0.36392593383789062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CWw-cU-C9m">
+                                <rect key="frame" x="165" y="97" width="128" height="59"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILc-DL-DWH">
+                                        <rect key="frame" x="0.0" y="0.0" width="62.333333333333336" height="24.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                        <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqn-vR-cem">
+                                        <rect key="frame" x="0.0" y="34.666666666666657" width="62.333333333333336" height="24.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
                                         <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-US-lMf">
-                                <rect key="frame" x="150" y="113" width="93" height="53"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="X7J-z2-wOM">
+                                <rect key="frame" x="63" y="654" width="287" height="17"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2W-Ez-Yvr">
-                                        <rect key="frame" x="0.0" y="0.0" width="93" height="20.666666666666668"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-O5-chS">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="17"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                         <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGf-zQ-7Fx">
-                                        <rect key="frame" x="0.0" y="32.666666666666657" width="93" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6V-MN-S8C">
+                                        <rect key="frame" x="110" y="0.0" width="67" height="17"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                                        <color key="textColor" red="0.35407230257987976" green="0.90711671113967896" blue="0.36392593383789062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JME-qo-GXe">
+                                        <rect key="frame" x="220" y="0.0" width="67" height="17"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                                        <color key="textColor" red="0.35407230257987976" green="0.90711671113967896" blue="0.36392593383789062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qlk-VD-VMq">
+                                <rect key="frame" x="183" y="537" width="26.333333333333343" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqI-OE-pel">
+                                        <rect key="frame" x="0.0" y="0.0" width="26.333333333333332" height="25"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                        <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-AO-ZCy">
+                                        <rect key="frame" x="0.0" y="25" width="26.333333333333332" height="25"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
                                         <color key="textColor" red="0.49914248639999997" green="0.98783827319999995" blue="0.50906629140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-KW-4Dm">
-                                <rect key="frame" x="58" y="174" width="277" height="300"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-KW-4Dm">
+                                <rect key="frame" x="38" y="176" width="311" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="DsG-Lt-ffE"/>
                                     <constraint firstAttribute="height" constant="300" id="OMP-1z-4NF"/>
@@ -151,28 +197,37 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gmT-rh-MId"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="gmT-rh-MId" firstAttribute="trailing" secondItem="abe-4N-Heq" secondAttribute="trailing" constant="33.670000000000002" id="AlD-rT-SDk"/>
-                            <constraint firstItem="cnf-KW-4Dm" firstAttribute="centerX" secondItem="G2S-US-lMf" secondAttribute="centerX" id="LZi-rq-Wcs"/>
-                            <constraint firstItem="abe-4N-Heq" firstAttribute="leading" secondItem="gmT-rh-MId" secondAttribute="leading" constant="66" id="UP8-0F-ON0"/>
-                            <constraint firstItem="gmT-rh-MId" firstAttribute="bottom" secondItem="abe-4N-Heq" secondAttribute="bottom" constant="290" id="YhP-fT-WJ1"/>
-                            <constraint firstItem="cnf-KW-4Dm" firstAttribute="top" secondItem="G2S-US-lMf" secondAttribute="bottom" constant="10" id="c2z-uI-CJs"/>
+                            <constraint firstItem="tC9-UC-deL" firstAttribute="top" secondItem="qlk-VD-VMq" secondAttribute="bottom" constant="31" id="3XK-Tg-qw7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tC9-UC-deL" secondAttribute="trailing" constant="27" id="8Ui-BE-2RW"/>
+                            <constraint firstItem="X7J-z2-wOM" firstAttribute="top" secondItem="tC9-UC-deL" secondAttribute="bottom" constant="19" id="BOa-hf-A4K"/>
+                            <constraint firstItem="gmT-rh-MId" firstAttribute="trailing" secondItem="CWw-cU-C9m" secondAttribute="trailing" constant="100" id="Bv5-g7-E3g"/>
+                            <constraint firstItem="gmT-rh-MId" firstAttribute="trailing" secondItem="cnf-KW-4Dm" secondAttribute="trailing" constant="44" id="CQa-sv-ecp"/>
+                            <constraint firstItem="X7J-z2-wOM" firstAttribute="leading" secondItem="gmT-rh-MId" secondAttribute="leading" constant="63" id="Kwl-RQ-xZ1"/>
+                            <constraint firstItem="tC9-UC-deL" firstAttribute="leading" secondItem="gmT-rh-MId" secondAttribute="leading" constant="63" id="LIX-MS-TCF"/>
+                            <constraint firstItem="gmT-rh-MId" firstAttribute="trailing" secondItem="X7J-z2-wOM" secondAttribute="trailing" constant="43" id="UiK-Ih-Cw3"/>
+                            <constraint firstItem="qlk-VD-VMq" firstAttribute="leading" secondItem="gmT-rh-MId" secondAttribute="leading" constant="183" id="ZJk-Kw-BJb"/>
+                            <constraint firstItem="cnf-KW-4Dm" firstAttribute="top" secondItem="CWw-cU-C9m" secondAttribute="bottom" constant="20" id="bc3-FD-ryQ"/>
+                            <constraint firstItem="gmT-rh-MId" firstAttribute="bottom" secondItem="X7J-z2-wOM" secondAttribute="bottom" constant="147" id="caE-vs-xTT"/>
+                            <constraint firstItem="X7J-z2-wOM" firstAttribute="top" secondItem="tC9-UC-deL" secondAttribute="bottom" constant="19" id="eFf-Hv-f2e"/>
                             <constraint firstItem="cnf-KW-4Dm" firstAttribute="leading" secondItem="gmT-rh-MId" secondAttribute="leading" constant="38" id="edL-69-WLQ"/>
-                            <constraint firstItem="G2S-US-lMf" firstAttribute="leading" secondItem="gmT-rh-MId" secondAttribute="leading" constant="150" id="hux-RD-9G5"/>
-                            <constraint firstItem="abe-4N-Heq" firstAttribute="top" secondItem="cnf-KW-4Dm" secondAttribute="bottom" constant="35" id="jDZ-JZ-caI"/>
-                            <constraint firstItem="G2S-US-lMf" firstAttribute="top" secondItem="gmT-rh-MId" secondAttribute="top" constant="10" id="sSk-4M-6TS"/>
+                            <constraint firstItem="qlk-VD-VMq" firstAttribute="top" secondItem="cnf-KW-4Dm" secondAttribute="bottom" constant="61" id="jMD-el-ruz"/>
+                            <constraint firstItem="CWw-cU-C9m" firstAttribute="top" secondItem="tbg-ST-Lzc" secondAttribute="top" constant="97" id="mNO-6t-65I"/>
+                            <constraint firstItem="CWw-cU-C9m" firstAttribute="leading" secondItem="gmT-rh-MId" secondAttribute="leading" constant="165" id="qAw-nv-5aU"/>
+                            <constraint firstItem="tC9-UC-deL" firstAttribute="top" secondItem="qlk-VD-VMq" secondAttribute="bottom" constant="31" id="rtE-AD-pVx"/>
+                            <constraint firstItem="gmT-rh-MId" firstAttribute="trailing" secondItem="qlk-VD-VMq" secondAttribute="trailing" constant="183.66999999999999" id="s8L-9M-32K"/>
                             <constraint firstItem="cnf-KW-4Dm" firstAttribute="top" secondItem="tbg-ST-Lzc" secondAttribute="top" constant="176" id="usE-oW-Hr3"/>
-                            <constraint firstItem="gmT-rh-MId" firstAttribute="trailing" secondItem="G2S-US-lMf" secondAttribute="trailing" constant="150" id="zX7-v9-SCM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LfG-RW-NYH"/>
                     <connections>
-                        <outlet property="characterIDLabel" destination="KGf-zQ-7Fx" id="XrV-A3-mDw"/>
+                        <outlet property="characterGenderLabel" destination="JME-qo-GXe" id="00I-L3-lxa"/>
+                        <outlet property="characterIDLabel" destination="Tjl-AO-ZCy" id="j6D-mY-sJH"/>
                         <outlet property="characterImage" destination="cnf-KW-4Dm" id="1bv-eg-zOt"/>
-                        <outlet property="characterNameLabel" destination="z2W-Ez-Yvr" id="Qjv-o6-eUb"/>
-                        <outlet property="characterOrginLabel" destination="FnC-dz-wTh" id="ZDa-kw-qvR"/>
-                        <outlet property="characterTypeLabel" destination="pTb-O5-chS" id="gb5-ic-xGp"/>
+                        <outlet property="characterNameLabel" destination="mqn-vR-cem" id="NMj-dH-d3o"/>
+                        <outlet property="characterSpecies" destination="pTb-O5-chS" id="hXs-ql-5VX"/>
+                        <outlet property="characterStatusLabel" destination="d6V-MN-S8C" id="J8G-om-dPz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gU-os-BJ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -202,6 +257,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

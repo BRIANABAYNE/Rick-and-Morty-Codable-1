@@ -11,22 +11,17 @@ import Foundation
 struct CharacterDetailDict: Decodable {
     private enum CodingKeys: String, CodingKey {
         case id
+        case status
         case characterName = "name"
-        case type
-        case origin
+        case gender
+        case species
     }
     
     let id: Int
+    let status: String 
     let characterName: String
-    let type: String
-    let origin: Origin
+    let gender: String
+    let species: String
 
 }
-struct Origin: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case nameLocation = "name"
-    }
-    
-    let nameLocation: String
-    
-}
+
