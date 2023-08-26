@@ -6,24 +6,21 @@
 //
 
 import Foundation
-import UIKit.UIImage
-
-@available(iOS 16.0, *)
-
+import UIKit.UIImage // Need this for image 
 
 struct NetworkingController {
 
-    // fetching the character data with a searchTerm that the user will be typing into the searchBar. I am asking for two different results, either TopLevelDict or an ResultError. The topLevelDict is the dictonary that we created from our model.
+    // fetching the character data with a searchTerm that the user will be typing into the searchBar. I am asking for two different results, either TopLevelDict or an ResultError. The topLevelDict is the dictonary that I created from model character.
     func fetchCharacter(with searchTerm: String, completion: @escaping (Result<TopLevelDictonary, ResultError>) -> Void) {
         // Building the base URL - Adding the guard since I am initializing a URL from a string and that will return an optional. If URL can't be create, there is no passing.
         guard let baseURL = URL(string: "https://rickandmortyapi.com/api/") else {completion(.failure(.invalidURL)); return}
-        // Creating the URL
         var urlRequest = URLRequest(url: baseURL)
         //Creating a urlRequest and assiging a URL request object initialized - URLRequest encapsulates two essential properties of a load request: the URL to load and the policies used to load it. In addition, for HTTP and HTTPS requests, URLRequest includes the HTTP method (GET, POST, and so on) and the HTTP headers. Can git and post with URLRequst.
         urlRequest.url?.append(path: searchTerm)
         // Appending the path of the URLRequst, had to make the urlRequst a var since we are changing it.
         print(urlRequest.url)
-        // Asking to print the URL in the debugger for testing purpuse only, very helpful when using break points to assure the URL looks correct.        // DATA Task
+        // Asking to print the URL in the debugger for testing purposes, very helpful when using break points to assure the URL looks correct.
+        // DATA Task
         URLSession.shared.dataTask(with: urlRequest) { characterData, characterResponse, error in
             // Asking for a URL request data type "with urlRequest"
             if let error {
@@ -67,14 +64,14 @@ struct NetworkingController {
             
         }.resume()
     }// end of fetchImage
-             // Fetching the characterDetails with an ID for the details of a single character that will display on the detail scree.
+             // Fetching the characterDetails with an ID for the details of a single character that will display on the detail screen.
             func fetchCharacterDetail(for id: Int, completion: @escaping (Result<CharacterDetailDict, ResultError>) -> Void ) {
                 guard let baseURL = URL(string: "https://rickandmortyapi.com/api/character") else
                 { completion(.failure(.invalidURL)); return}
                 var urlRequest = URLRequest(url: baseURL)
                 // Appending a string interpolation - Turining an INT into a stirng / Path only takes a string
                 urlRequest.url?.append(path: "\(id)")
-    
+                 // Data task
                 URLSession.shared.dataTask(with: urlRequest) { characterDetailData, _, characterDetailError in
     
                     if let characterDetailError {

@@ -10,7 +10,6 @@ import UIKit
 class CharacterDetailViewController: UIViewController {
     
     // MARK: - Outlets
-    
     @IBOutlet weak var characterStatusLabel: UILabel!
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterIDLabel: UILabel!
@@ -37,7 +36,7 @@ class CharacterDetailViewController: UIViewController {
         guard let unrapedCharacterDetailDict = characterDetailSentViaSegue,
               let unrapedCharacterImage = characterImageSentViaSegue else { return }
         // All UI updates happen on the main thread.
-        DispatchQueue.main.sync { // all UI changes on main thread. Updating
+        DispatchQueue.main.sync { // Updating
             self.characterStatusLabel.text = unrapedCharacterDetailDict.status
             self.characterNameLabel.text = unrapedCharacterDetailDict.characterName
             self.characterIDLabel.text = "\(unrapedCharacterDetailDict.id)" // string interpolation becasue ID is an INT. 

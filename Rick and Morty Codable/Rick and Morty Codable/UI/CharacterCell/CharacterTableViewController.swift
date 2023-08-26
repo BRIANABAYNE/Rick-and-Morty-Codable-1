@@ -6,9 +6,8 @@
 //
 
 import UIKit
-@available(iOS 16.0, *)
+
 class CharacterTableViewController: UITableViewController {
-    
     
     // MARK: - Outlets
     //UI SearchBar

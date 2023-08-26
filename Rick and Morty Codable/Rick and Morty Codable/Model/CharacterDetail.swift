@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// Creating the characterDetail
 struct CharacterDetailDict: Decodable {
     private enum CodingKeys: String, CodingKey {
         case id
@@ -24,4 +24,3 @@ struct CharacterDetailDict: Decodable {
     let species: String
 
 }
-
