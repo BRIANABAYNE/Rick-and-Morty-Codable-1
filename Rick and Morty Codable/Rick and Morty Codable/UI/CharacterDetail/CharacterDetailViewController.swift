@@ -18,10 +18,10 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var characterSpecies: UILabel!
     
     // MARK: - Properties
-    // Waiting to receieve a value since they are optional
+    
     var characterDetailSentViaSegue: CharacterDetailDict? {
-        didSet { // property observor / Will feel confindent that the image was already set from the talbleView Controller in the fetchCharacter Data -
-            updateView() // Dont want the view to update until I have a characterDetailSentViaSegue, that's where the didSet comes into play
+        didSet {
+            updateView()
         }
     }
     var characterImageSentViaSegue: UIImage?
@@ -32,14 +32,13 @@ class CharacterDetailViewController: UIViewController {
     }
     // MARK: - Functions
     func updateView() {
-        // guarding the optionals with guard
         guard let unrapedCharacterDetailDict = characterDetailSentViaSegue,
               let unrapedCharacterImage = characterImageSentViaSegue else { return }
-        // All UI updates happen on the main thread.
+        
         DispatchQueue.main.sync { // Updating
             self.characterStatusLabel.text = unrapedCharacterDetailDict.status
             self.characterNameLabel.text = unrapedCharacterDetailDict.characterName
-            self.characterIDLabel.text = "\(unrapedCharacterDetailDict.id)" // string interpolation becasue ID is an INT. 
+            self.characterIDLabel.text = "\(unrapedCharacterDetailDict.id)" // string interpolation becasue ID is an INT.
             self.characterImage.image = unrapedCharacterImage
             self.characterGenderLabel.text = unrapedCharacterDetailDict.gender
             self.characterSpecies.text = unrapedCharacterDetailDict.species
